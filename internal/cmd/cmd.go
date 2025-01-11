@@ -8,6 +8,7 @@ import (
 	"github.com/gogf/gf/v2/os/gcmd"
 
 	"Capys/internal/controller/hello"
+	"Capys/internal/controller/user"
 )
 
 var (
@@ -21,6 +22,7 @@ var (
 				group.Middleware(ghttp.MiddlewareHandlerResponse)
 				group.Bind(
 					hello.NewV1(),
+					user.NewV1(),
 				)
 			})
 			s.Run()
